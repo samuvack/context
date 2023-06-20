@@ -43,29 +43,6 @@
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#record",
       "@type": "@id"
-    },
-    "Catalogus.titel": {
-      "@container": "@set",
-      "@id": "http://purl.org/dc/terms/title",
-      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Catalogus.uitgever": {
-      "@id": "http://purl.org/dc/terms/publisher",
-      "@type": "@id"
-    },
-    "CatalogusRecord": "http://www.w3.org/ns/dcat#CatalogRecord",
-    "CatalogusRecord.aanmaakdatum": {
-      "@id": "http://purl.org/dc/terms/issued",
-      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    "CatalogusRecord.alternatieveIdentificator": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "@id"
-    },
-    "CatalogusRecord.bronMetadataRecordLandingspagina": {
-      "@id": "http://data.vlaanderen.be/ns/metadata-dcat#bron_metadata_record_landingspagina",
-      "@type": "@id"
     }
   }
 }
