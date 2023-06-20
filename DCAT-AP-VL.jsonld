@@ -16,33 +16,6 @@
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/description",
       "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-    },
-    "Catalogus.contactinformatie": {
-      "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "@id"
-    },
-    "Catalogus.heeftDataService": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#service",
-      "@type": "@id"
-    },
-    "Catalogus.heeftDataset": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#dataset",
-      "@type": "@id"
-    },
-    "Catalogus.identificator": {
-      "@id": "http://purl.org/dc/terms/identifier",
-      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "Catalogus.licentie": {
-      "@id": "http://purl.org/dc/terms/license",
-      "@type": "@id"
-    },
-    "Catalogus.record": {
-      "@container": "@set",
-      "@id": "http://www.w3.org/ns/dcat#record",
-      "@type": "@id"
     }
   }
 }
