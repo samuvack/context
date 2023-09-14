@@ -9,10 +9,7 @@
     "Dimensie": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dimensie",
     "Domeinobject": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
     "Fietspad": "https://data.vlaanderen.be/ns/verkeersmetingen#Fietspad",
-    "Fietspad.netwerkreferentie": {
-      "@id": "https//fixme.com",
-      "@type": "@id"
-    },
+
     "Formaat": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat",
     "Gegevensdrager": "http://purl.org/dc/terms/PhysicalMedium",
     "Geometrie": "https://data.vlaanderen.be/ns/weg#geometrie",
@@ -50,7 +47,7 @@
       "@id": "http://purl.org/dc/terms/issued",
       "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
-    "Informatietype": "http://fixme.com#Informatietype",
+
     "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
     "Kwaliteitselement": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
     "Lengte": "https://schema.org/Distance",
@@ -193,20 +190,14 @@
       "@type": "@id"
     },
     "Rijrichting": "https://data.vlaanderen.be/ns/weg#Rijrichting",
-    "Rijrichting.netwerkreferentie": {
-      "@id": "https://fixme.com",
-      "@type": "@id"
-    },
+
     "Rijrichting.rijrichting": {
       "@id": "https://data.vlaanderen.be/ns/weg#rijrichting",
       "@type": "@id"
     },
     "Rijrichtingtype": "https://data.vlaanderen.be/ns/verkeersmetingen#Rijrichtingtype",
     "Rijstrook": "https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook",
-    "Rijstrook.netwerkreferentie": {
-      "@id": "https//fixme.com",
-      "@type": "@id"
-    },
+
     "Rijstrook.rijstrook": {
       "@id": "https://data.vlaanderen.be/ns/verkeersmetingen#rijstrook",
       "@type": "@id"
@@ -323,11 +314,7 @@
       "@id": "https://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
       "@type": "@id"
     },
-    "Verkeersmeting.gebruikteProcedure": {
-      "@container": "@set",
-      "@id": "https://fixme.com",
-      "@type": "@id"
-    },
+
     "Verkeersmeting.geobserveerdKenmerk": {
       "@id": "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdKenmerk",
       "@type": "@id"
@@ -336,10 +323,7 @@
       "@id": "https://data.vlaanderen.be/ns/verkeersmetingen#geobserveerdObject",
       "@type": "@id"
     },
-    "Verkeersmeting.metadata": {
-      "@id": "https://fixme.com",
-      "@type": "@id"
-    },
+
     "Verkeersmeting.resultaat": {
       "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
       "@id":"http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result"
@@ -359,10 +343,7 @@
       "@type": "@id"
     },
     "Verkeersmetingverzameling": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling",
-    "Verkeersmetingverzameling.fenomeentijd": {
-      "@id": "https://fixme.com",
-      "@type": "@id"
-    },
+
     "Verkeersmetingverzameling.geobserveerdKenmerk": {
       "@id": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmetingverzameling.geobserveerdKenmerk",
       "@type": "@id"
@@ -376,14 +357,7 @@
       "@id": "https://data.vlaanderen.be/ns/verkeersmetingen#heeftLid",
       "@type": "@id"
     },
-    "Verkeersmetingverzameling.metadata": {
-      "@id": "https://fixme.com",
-      "@type": "@id"
-    },
-    "Verkeersmetingverzameling.uitgevoerdMet": {
-      "@id": "https://fixme.com",
-      "@type": "@id"
-    },
+
     "Verkeersobject": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersobject",
     "Verkeersobject.waardeverschaffer": {
       "@container": "@set",
@@ -407,11 +381,7 @@
       "@type": "@id"
     },
     "Weglinksequentie": "https://data.vlaanderen.be/ns/weg#Weglinksequentie",
-    "Weglinksequentie.link": {
-      "@container": "@set",
-      "@id": "https://fixme.com",
-      "@type": "@id"
-    },
+
     "Wegobject": "https://data.vlaanderen.be/ns/weg#Wegobject",
     "Wegsegment": "https://data.vlaanderen.be/ns/weg#Wegsegment",
     "Wegsegment.beginknoop": {
