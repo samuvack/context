@@ -341,8 +341,8 @@
       "@type": "@id"
     },
     "Verkeersmeting.resultaat": {
-      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
-      "@type": "@id"
+      "@type": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
+      "@id":"http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result"
     },
     "Verkeersmeting.resultaatkwaliteit": {
       "@container": "@set",
