@@ -1,0 +1,750 @@
+{
+  "@context": {
+    "3Dobject": "http://www.opengis.net/ont/gml#Solid",
+    "Agent": "http://purl.org/dc/terms/Agent",
+    "Any": "http://def.isotc211.org/iso19103/2005/RecordsAndClassMetadata#Any",
+    "Bemonsteraar": "http://www.w3.org/ns/sosa/Sampler",
+    "Bemonsteraar.implementeert": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringsprocedure"
+    },
+    "Bemonsteraar.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteraartype"
+    },
+    "Bemonsteraar.uitgevoerdeBemonstering": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeSampling",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonstering"
+    },
+    "Bemonsteraartype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonstering": "http://www.w3.org/ns/sosa/Sampling",
+    "Bemonstering.bemonsterdObject": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Object"
+    },
+    "Bemonstering.bemonsteringstijdstip": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#TemporeleEntiteit"
+    },
+    "Bemonstering.conditie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.conditie",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#BenoemdeWaarde"
+    },
+    "Bemonstering.doel": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.doel",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringsdoel"
+    },
+    "Bemonstering.gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringsprocedure"
+    },
+    "Bemonstering.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.opdracht",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Opdracht"
+    },
+    "Bemonstering.resultaat": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasResult",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringsobject"
+    },
+    "Bemonstering.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringstype"
+    },
+    "Bemonstering.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.uitgevoerdDoor",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Agent"
+    },
+    "Bemonstering.uitgevoerdMet": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySampler",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteraar"
+    },
+    "Bemonstering.wettelijkKader": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonstering.wettelijkKader",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#WettelijkKader"
+    },
+    "Bemonsterings3Dobject": "http://def.isotc211.org/iso19156/2011/SamplingSolid#SF_SamplingSolid",
+    "BemonsteringsProces": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Process",
+    "Bemonsteringscurve": "http://def.isotc211.org/iso19156/2011/SamplingCurve#SF_SamplingCurve",
+    "Bemonsteringsdoel": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature",
+    "Bemonsteringsobject.bemonsterdObject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.sampledFeature",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Object"
+    },
+    "Bemonsteringsobject.geassocieerdBemonsteringsobject": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.relatedSamplingFeature",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringsobject"
+    },
+    "Bemonsteringsobject.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatie"
+    },
+    "Bemonsteringsobject.herkomst": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.lineage",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Herkomst"
+    },
+    "Bemonsteringsobject.identificator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Bemonsteringsobject.identificator",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Identificator"
+    },
+    "Bemonsteringsobject.isResultaatVan": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isResultOf",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonstering"
+    },
+    "Bemonsteringsobject.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeature.parameter",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#BenoemdeWaarde"
+    },
+    "Bemonsteringsobject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringsobjecttype"
+    },
+    "BemonsteringsobjectComplex": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex",
+    "BemonsteringsobjectComplex.bemonsteringsobject(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.source",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Getal"
+    },
+    "BemonsteringsobjectComplex.bemonsteringsobject(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#BemonsteringsobjectComplex.bemonsteringsobject.target",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Getal"
+    },
+    "BemonsteringsobjectComplex.rol": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SamplingFeatureComplex.role",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#GeneriekeNaam"
+    },
+    "Bemonsteringsobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringsobjectverzameling": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection",
+    "Bemonsteringsobjectverzameling.lid": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingFeature#SF_SamplingFeatureCollection.member",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringsobject"
+    },
+    "Bemonsteringsprocedure": "http://www.w3.org/ns/sosa/om#SamplingProcedure",
+    "Bemonsteringsprocedure.ge\u00efmplementeerdDoor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Getal"
+    },
+    "Bemonsteringsprocedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Input"
+    },
+    "Bemonsteringsprocedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Output"
+    },
+    "Bemonsteringsprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.parameter",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#BenoemdeWaarde"
+    },
+    "Bemonsteringsprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Bemonsteringsprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Bemonsteringsprocedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bemonsteringsproceduretype"
+    },
+    "Bemonsteringsproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringspunt": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint",
+    "Bemonsteringstype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Bemonsteringsvlak": "http://def.isotc211.org/iso19156/2011/SamplingSurface#SF_SamplingSurface",
+    "BenoemdeWaarde": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue",
+    "BenoemdeWaarde.naam": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.name",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#GeneriekeNaam"
+    },
+    "BenoemdeWaarde.waarde": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#NamedValue.value",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Any"
+    },
+    "Bestandsformaat": "http://purl.org/dc/terms/FileFormat",
+    "Boorgat": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Borehole",
+    "Boorgat.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Curve"
+    },
+    "Conditie": "http://www.w3.org/ns/ssn/systems/Condition",
+    "Curve": "http://www.opengis.net/ont/geosparql#Curve",
+    "Dekking": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dekking",
+    "Dimensie": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Dimensie",
+    "Domeinobject": "http://def.isotc211.org/iso19156/2011GeneralFeatureInstance#GFI_DomainFeature",
+    "Domeinobject.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Domeinobjecttype"
+    },
+    "Domeinobjecttype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Doorsnede": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Section",
+    "Doorsnede.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Vlak"
+    },
+    "Formaat": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat",
+    "Functie": "https://saref.etsi.org/core/Function",
+    "Gegevensdrager": "http://purl.org/dc/terms/PhysicalMedium",
+    "GeneriekeNaam": "http://def.isotc211.org/iso19103/2005/Names#GenericName",
+    "Geometrie": "http://www.w3.org/ns/locn#Geometry",
+    "Geometrie.gml": {
+      "@id": "http://www.opengis.net/ont/geosparql#asGML",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Geometrie.opmeting": {
+      "@id": "https://data.vlaanderen.be/ns/generiek#Geometrie.opmeting",
+      "@type": "https://data.vlaanderen.be/ns/generiek#Opmeting"
+    },
+    "Geometrie.wkt": {
+      "@id": "http://www.opengis.net/ont/geosparql#asWKT",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "Getal": "https://schema.org/Number",
+    "Herkomst": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#LI_Lineage",
+    "Identificator": "http://www.w3.org/ns/adms#Identifier",
+    "Informatietype": "http://fixme.com#Informatietype",
+    "Input": "http://www.w3.org/ns/ssn/Input",
+    "Input.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Input.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Input.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#InputType"
+    },
+    "InputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Interval": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Interval",
+    "Interval.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Curve"
+    },
+    "Kaarthorizon": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#MapHorizon",
+    "Kaarthorizon.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Vlak"
+    },
+    "Kenmerktype": "http://def.isotc211.org/iso19109/2005/GeneralFeatureModel#GF_PropertyType",
+    "Kenmerktype.isGeobserveerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isObservedBy",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Sensor"
+    },
+    "Kwadraat": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Quadrat",
+    "Kwadraat.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Vlak"
+    },
+    "Kwaliteitselement": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_Element",
+    "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
+    "KwantitatieveWaarde.eenheid": {
+      "@id": "https://schema.org/unitText",
+      "@type": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "KwantitatieveWaarde.standaardEenheid": {
+      "@id": "https://schema.org/unitCode",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Getal"
+    },
+    "KwantitatieveWaarde.waarde": {
+      "@id": "https://schema.org/value",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Getal"
+    },
+    "LidaRpuntenwolk": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#LidarCloud",
+    "LidaRpuntenwolk.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#3Dobject"
+    },
+    "Locatie": "http://www.w3.org/ns/prov#Location",
+    "Maat": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure",
+    "Maat.maat": {
+      "@id": "http://def.isotc211.org/iso19103/2005/UnitsOfMeasure#Measure.value",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#KwantitatieveWaarde"
+    },
+    "Metadata": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
+    "Metadata.auteur": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/creator",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Agent"
+    },
+    "Metadata.beschrijving": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/description",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Metadata.bron": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/source",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Metadata.datum": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/date",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#TemporeleEntiteit"
+    },
+    "Metadata.dekking": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/coverage",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Dekking"
+    },
+    "Metadata.formaat": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/format",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Formaat"
+    },
+    "Metadata.identificator": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/identifier",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Identificator"
+    },
+    "Metadata.medeAuteur": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/contributor",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Agent"
+    },
+    "Metadata.onderwerp": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/subject",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Metadata.rechten": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/rights",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Metadata.relatie": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/relation",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Metadata.taal": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/language",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Taalcode"
+    },
+    "Metadata.titel": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/title",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Metadata.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Informatietype"
+    },
+    "Metadata.uitgever": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/elements/1.1/publisher",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Agent"
+    },
+    "Mijn": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Mine",
+    "Mijn.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#3Dobject"
+    },
+    "Mijnniveau": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#MineLevel",
+    "Mijnniveau.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Vlak"
+    },
+    "Moment": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Instant",
+    "Monster": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen",
+    "Monster.bemonsteringsmethode": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingMethod",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#BemonsteringsProces"
+    },
+    "Monster.bemonsteringsplaats": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingLocation",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Geometrie"
+    },
+    "Monster.bemonsteringstijdstip": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.samplingTime",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#TemporeleEntiteit"
+    },
+    "Monster.grootte": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.size",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Maat"
+    },
+    "Monster.huidigeLocatie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.currentLocation",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Locatie"
+    },
+    "Monster.materiaalklasse": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.materialClass",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#GeneriekeNaam"
+    },
+    "Monster.monstertype": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#SF_Specimen.specimenType",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#GeneriekeNaam"
+    },
+    "Monstervoorbereiding": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep",
+    "Monstervoorbereiding.procesoperator": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.processOperator",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Agent"
+    },
+    "Monstervoorbereiding.tijdstip": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Specimen#PreparationStep.time",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#TemporeleEntiteit"
+    },
+    "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
+    "Object.waardeverschaffer": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Object.waardeverschaffer",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatie"
+    },
+    "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
+    "Observatie.fenomeentijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.phenomenonTime",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#TemporeleEntiteit"
+    },
+    "Observatie.geassocieerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.relatedObservation",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatie"
+    },
+    "Observatie.gebruikteProcedure": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatieprocedure"
+    },
+    "Observatie.geldigeTijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.validTime",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Periode"
+    },
+    "Observatie.geobserveerdKenmerk": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.observedProperty",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Kenmerktype"
+    },
+    "Observatie.geobserveerdObject": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.featureOfInterest",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Object"
+    },
+    "Observatie.identificator": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.identificator",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Identificator"
+    },
+    "Observatie.metadata": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.metadata",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Metadata"
+    },
+    "Observatie.opdracht": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.opdracht",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Opdracht"
+    },
+    "Observatie.parameter": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.parameter",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#BenoemdeWaarde"
+    },
+    "Observatie.resultaat": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.result",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Any"
+    },
+    "Observatie.resultaatkwaliteit": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultQuality",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Kwaliteitselement"
+    },
+    "Observatie.resultaattijd": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.resultTime",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Moment"
+    },
+    "Observatie.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatietype"
+    },
+    "Observatie.uitgevoerdDoor": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatie.uitgevoerdDoor",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Agent"
+    },
+    "Observatie.uitgevoerdMetSensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Sensor"
+    },
+    "Observatiecontext": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext",
+    "Observatiecontext.observatie(source)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.source",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Getal"
+    },
+    "Observatiecontext.observatie(target)": {
+      "@id": "https://data.vlaanderen.be/ns/observaties-en-metingen#Observatiecontext.observatie.target",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Getal"
+    },
+    "Observatiecontext.rol": {
+      "@id": "http://def.isotc211.org/iso19156/2011/Observation#ObservationContext.role",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#GeneriekeNaam"
+    },
+    "Observatieprocedure": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
+    "Observatieprocedure.ge\u00efmplementeerdMet": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/implementedBy",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Getal"
+    },
+    "Observatieprocedure.input": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasInput",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Input"
+    },
+    "Observatieprocedure.output": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/hasOutput",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Output"
+    },
+    "Observatieprocedure.parameter": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.parameter",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#BenoemdeWaarde"
+    },
+    "Observatieprocedure.specificatie": {
+      "@container": "@set",
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieprocedure.specificatie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Observatieprocedure.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatieproceduretype"
+    },
+    "Observatieproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observatieput": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#ObservationWell",
+    "Observatieput.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Curve"
+    },
+    "Observatietype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Observatieverzameling": "https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection",
+    "Observatieverzameling.fenomeentijd": {
+      "@id": "http://www.w3.org/ns/sosa/phenomenonTime",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#TemporeleEntiteit"
+    },
+    "Observatieverzameling.gebruikteProcedure": {
+      "@id": "http://www.w3.org/ns/sosa/usedProcedure",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatieprocedure"
+    },
+    "Observatieverzameling.geobserveerdKenmerk": {
+      "@id": "http://www.w3.org/ns/sosa/observedProperty",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Kenmerktype"
+    },
+    "Observatieverzameling.geobserveerdObject": {
+      "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Object"
+    },
+    "Observatieverzameling.heeftLid": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/hasMember",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatie"
+    },
+    "Observatieverzameling.metadata": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieverzameling.metadata",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Metadata"
+    },
+    "Observatieverzameling.parameter": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Observatieverzameling.parameter",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#BenoemdeWaarde"
+    },
+    "Observatieverzameling.resultaattijd": {
+      "@id": "http://www.w3.org/ns/sosa/resultTime",
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Observatieverzameling.uitgevoerdMetsensor": {
+      "@id": "http://www.w3.org/ns/sosa/madeBySensor",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Sensor"
+    },
+    "Ontsluiting": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Outcrop",
+    "Opdracht": "https://data.vlaanderen.be/ns/bodem-en-ondergrond#Opdracht",
+    "Output": "http://www.w3.org/ns/ssn/Output",
+    "Output.referentie": {
+      "@id": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Output.referentie",
+      "@type": "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Output.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#OutputType"
+    },
+    "OutputType": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Overlevingscapaciteit": "http://www.w3.org/ns/ssn/systems/SurvivalRange",
+    "Overlevingscapaciteit.conditie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Conditie"
+    },
+    "Overlevingscapaciteit.kenmerk": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalProperty",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Overlevingskenmerk"
+    },
+    "Overlevingskenmerk": "http://www.w3.org/ns/ssn/systems/SurvivalProperty",
+    "Peilpunt": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Sounding",
+    "Peilpunt.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "http://www.opengis.net/ont/sf#Point"
+    },
+    "Periode": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Period",
+    "Platform": "https://www.w3.org/ns/sosa/Platform",
+    "Platform.hostVan": {
+      "@container": "@set",
+      "@id": "https://www.w3.org/ns/sosa/hosts",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Systeem"
+    },
+    "Platform.type": {
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Platformtype"
+    },
+    "Platformtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "PositioneleNauwkeurigheid": "http://def.isotc211.org/iso19115/2006/DataQualityInformation#DQ_PositionalAccuracy",
+    "Procedure": "http://www.w3.org/ns/sosa/Procedure",
+    "Proces": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation.OM_Process",
+    "Profiel": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Profile",
+    "Profiel.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingCurve.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Curve"
+    },
+    "RuimtelijkBemonsteringsobject": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature",
+    "RuimtelijkBemonsteringsobject.gehostPlatform": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.hostedProcedure",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Proces"
+    },
+    "RuimtelijkBemonsteringsobject.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Geometrie"
+    },
+    "RuimtelijkBemonsteringsobject.positioneleNauwkeurigheid": {
+      "@container": "@set",
+      "@id": "http://def.isotc211.org/iso19156/2011/SpatialSamplingFeature#SF_SpatialSamplingFeature.positionalAccuracy",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#PositioneleNauwkeurigheid"
+    },
+    "Scene": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Scene",
+    "Scene.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Vlak"
+    },
+    "Sensor": "https://www.w3.org/ns/sosa/Sensor",
+    "Sensor.implementeert": {
+      "@id": "http://www.w3.org/ns/ssn/implements",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatieprocedure"
+    },
+    "Sensor.observeert": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/observes",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Kenmerktype"
+    },
+    "Sensor.uitgevoerdeObservatie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/madeObservation",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Observatie"
+    },
+    "StandaardEenheid": "http://purl.org/dc/terms/coverage",
+    "Station": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Station",
+    "Station.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "http://www.opengis.net/ont/sf#Point"
+    },
+    "Systeem": "https://www.w3.org/TR/vocab-ssn/#ssn-system",
+    "Systeem.capaciteit": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSystemCapability",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Systeemvermogen"
+    },
+    "Systeem.gehostDoor": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/sosa/isHostedBy",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Platform"
+    },
+    "Systeem.overlevingsbereik": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSurvivalRange",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Overlevingscapaciteit"
+    },
+    "Systeem.type": {
+      "@container": "@set",
+      "@id": "http://purl.org/dc/terms/type",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Systeemtype"
+    },
+    "Systeem.werkingsbereik": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingRange",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Werkingsbereik"
+    },
+    "Systeemkenmerk": "http://www.w3.org/ns/ssn/systems/SystemProperty",
+    "Systeemtype": "http://www.w3.org/2004/02/skos/core#Concept",
+    "Systeemvermogen": "http://www.w3.org/ns/ssn/systems/SystemCapacity",
+    "Systeemvermogen.conditie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Conditie"
+    },
+    "Systeemvermogen.kenmerk": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasSystemProperty",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Systeemkenmerk"
+    },
+    "Taak": "https://saref.etsi.org/core/Task",
+    "Taalcode": "http://www.w3.org/2004/02/skos/core#Concept",
+    "TemporeleEntiteit": "http://def.isotc211.org/iso19108/2006/TemporalObjects#TM_Object",
+    "Toestel": "https://saref.etsi.org/core/Device",
+    "Toestel.fabrikant": {
+      "@id": "https://saref.etsi.org/core/hasManufacturer",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Toestel.functie": {
+      "@container": "@set",
+      "@id": "https://saref.etsi.org/core/hasFunction",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Functie"
+    },
+    "Toestel.model": {
+      "@id": "https://saref.etsi.org/core/hasModel",
+      "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+    },
+    "Toestel.taak": {
+      "@container": "@set",
+      "@id": "https://saref.etsi.org/core/accomplishes",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Taak"
+    },
+    "Traject": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Trajectory",
+    "Traject.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Curve"
+    },
+    "Traverse": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Traverse",
+    "Traverse.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Curve"
+    },
+    "Vlak": "http://www.opengis.net/ont/geosparql#Surface",
+    "Werkingsbereik": "http://www.w3.org/ns/ssn/systems/OperatingRange",
+    "Werkingsbereik.conditie": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/ns/ssn/systems/inCondition",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Conditie"
+    },
+    "Werkingsbereik.kenmerk": {
+      "@id": "http://www.w3.org/ns/ssn/systems/hasOperatingProperty",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Werkingskenmerk"
+    },
+    "Werkingskenmerk": "http://www.w3.org/ns/ssn/systems/OperatingRange",
+    "WettelijkKader": "https://data.vlaanderen.be/ns/generiek#WettelijkKader",
+    "Zwad": "http://def.isotc211.org/iso19156/2011/DomainSpecificSamplingFeatures#Swath",
+    "Zwad.geometrie": {
+      "@id": "http://def.isotc211.org/iso19156/2011/SamplingPoint#SF_SamplingPoint.shape",
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Vlak"
+    }
+  }
+}
