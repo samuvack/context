@@ -19,7 +19,7 @@
     },
     "Catalogus.contactinformatie": {
       "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Contactinfo"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Contactinfo"
     },
     "Catalogus.heeftDataService": {
       "@container": "@set",
@@ -37,12 +37,12 @@
     },
     "Catalogus.licentie": {
       "@id": "http://purl.org/dc/terms/license",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Licentie Document"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Licentie Document"
     },
     "Catalogus.record": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#record",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Catalogus Record"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Catalogus Record"
     },
     "Catalogus.titel": {
       "@container": "@set",
@@ -51,7 +51,7 @@
     },
     "Catalogus.uitgever": {
       "@id": "http://purl.org/dc/terms/publisher",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Agent"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Agent"
     },
     "CatalogusRecord": "http://www.w3.org/ns/dcat#CatalogRecord",
     "CatalogusRecord.aanmaakdatum": {
@@ -136,7 +136,7 @@
     },
     "Dataservice.contactinformatie": {
       "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Contactinfo"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Contactinfo"
     },
     "Dataservice.creatiedatum": {
       "@id": "http://purl.org/dc/terms/created",
@@ -182,7 +182,7 @@
     },
     "Dataservice.licentie": {
       "@id": "http://purl.org/dc/terms/license",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Licentie Document"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Licentie Document"
     },
     "Dataservice.ontwikkelingstoestand": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#ontwikkelingstoestand",
@@ -195,7 +195,7 @@
     "Dataservice.rechten": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/rights",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Juridische bepaling"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Juridische bepaling"
     },
     "Dataservice.serviceCategorie": {
       "@container": "@set",
@@ -253,11 +253,11 @@
     "Dataset.conform": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Standaard"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Standaard"
     },
     "Dataset.contactinformatie": {
       "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Contactinfo"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Contactinfo"
     },
     "Dataset.creatiedatum": {
       "@id": "http://purl.org/dc/terms/created",
@@ -266,12 +266,12 @@
     "Dataset.distributie": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#distribution",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Distributie"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Distributie"
     },
     "Dataset.eigenaar": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/rightsHolder",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Agent"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Agent"
     },
     "Dataset.gemetConcept": {
       "@container": "@set",
@@ -286,7 +286,7 @@
     "Dataset.herkomst": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/provenance",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Herkomst Verklaring"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Herkomst Verklaring"
     },
     "Dataset.identificator": {
       "@id": "http://purl.org/dc/terms/identifier",
@@ -354,7 +354,7 @@
     "Dataset.voorbeeldweergave": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#sample",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Voorbeeldweergave"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Voorbeeldweergave"
     },
     "Dataset.wijzigingsdatum": {
       "@id": "http://purl.org/dc/terms/modified",
@@ -369,7 +369,7 @@
     "Distributie.conform": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Standaard"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Standaard"
     },
     "Distributie.downloadUrl": {
       "@id": "http://www.w3.org/ns/dcat#downloadURL",
@@ -385,12 +385,12 @@
     },
     "Distributie.licentie": {
       "@id": "http://purl.org/dc/terms/license",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Licentie Document"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Licentie Document"
     },
     "Distributie.rechten": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/rights",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Juridische bepaling"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Juridische bepaling"
     },
     "Distributie.titel": {
       "@container": "@set",
@@ -403,7 +403,7 @@
     },
     "Distributie.verdeler": {
       "@id": "http://data.europa.eu/930/distributor",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL/#Agent"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Agent"
     },
     "Distributie.wordtAangebodenDoor": {
       "@container": "@set",
