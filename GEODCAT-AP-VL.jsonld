@@ -195,7 +195,7 @@
     "Dataservice.rechten": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/rights",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Juridische bepaling"
+      "@type": "http://purl.org/dc/terms/RightsStatement"
     },
     "Dataservice.serviceCategorie": {
       "@container": "@set",
