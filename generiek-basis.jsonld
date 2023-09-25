@@ -16,7 +16,7 @@
     },
     "Contactinfo.adres": {
       "@id": "http://www.w3.org/ns/locn#address",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Adresvoorstelling"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Adresvoorstelling"
     },
     "Contactinfo.beschikbaarheid": {
       "@id": "http://schema.org/hoursAvailable",
@@ -49,7 +49,7 @@
     "Creatie": "http://www.w3.org/ns/prov#Generation",
     "Creatie.activiteit": {
       "@id": "http://www.w3.org/ns/prov#activity",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Herkomstactiviteit"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Herkomstactiviteit"
     },
     "Creatie.tijdstip": {
       "@id": "http://www.w3.org/ns/prov#atTime",
@@ -147,7 +147,7 @@
     "Gebeurtenis.tijdschema": {
       "@container": "@set",
       "@id": "https://schema.org/eventSchedule",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Tijdschema"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Tijdschema"
     },
     "Gebeurtenisdatum": "https://data.vlaanderen.be/ns/generiek#Gebeurtenisdatum",
     "Gebeurtenisdatum.begin": {
@@ -210,15 +210,15 @@
     "Herkomstactiviteit": "http://www.w3.org/ns/prov#Activity",
     "Herkomstactiviteit.applicatie": {
       "@id": "http://www.w3.org/ns/prov#used",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Herkomstentiteit"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Herkomstentiteit"
     },
     "Herkomstactiviteit.bewerking": {
       "@id": "https://data.vlaanderen.be/ns/generiek#bewerking",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Bewerkingstype"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Bewerkingstype"
     },
     "Herkomstactiviteit.operator": {
       "@id": "http://www.w3.org/ns/prov#wasAssociatedWith",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Herkomstagent"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Herkomstagent"
     },
     "Herkomstagent": "http://www.w3.org/ns/prov#Agent",
     "Herkomstagent.handeldeInOpdrachtVan": {
@@ -260,7 +260,7 @@
     "Jurisdictie": "http://purl.org/dc/terms/Jurisdiction",
     "Jurisdictie.plaats": {
       "@id": "https://data.vlaanderen.be/ns/generiek#plaats",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Plaats"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Plaats"
     },
     "KwantitatieveWaarde": "https://schema.org/QuantitativeValue",
     "KwantitatieveWaarde.eenheid": {
@@ -284,12 +284,12 @@
     "Object.identificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Identificator"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Identificator"
     },
     "Opheffing": "http://www.w3.org/ns/prov#Invalidation",
     "Opheffing.activiteit": {
       "@id": "http://www.w3.org/ns/prov#activity",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Herkomstactiviteit"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Herkomstactiviteit"
     },
     "Opheffing.tijdstip": {
       "@id": "http://www.w3.org/ns/prov#atTime",
@@ -309,7 +309,7 @@
     "Plaats": "http://purl.org/dc/terms/Location",
     "Plaats.geometrie": {
       "@id": "http://www.w3.org/ns/locn#geometry",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Geometrie"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Geometrie"
     },
     "Plaats.plaatsnaam": {
       "@container": "@set",
@@ -378,7 +378,7 @@
     "Versie": "https://data.vlaanderen.be/ns/generiek#Versie",
     "Versie.creatie": {
       "@id": "http://www.w3.org/ns/prov#qualifiedGeneration",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Creatie"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Creatie"
     },
     "Versie.isTijdspecialisatieVan": {
       "@id": "https://data.vlaanderen.be/ns/generiek#isTijdspecialisatieVan",
@@ -386,7 +386,7 @@
     },
     "Versie.opheffing": {
       "@id": "http://www.w3.org/ns/prov#qualifiedInvalidation",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Opheffing"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/generiek-basis/#Opheffing"
     },
     "VersieVolgensGeldigeTijd": "https://data.vlaanderen.be/ns/generiek#VersieVolgensGeldigeTijd",
     "VersieVolgensTransactietijd": "https://data.vlaanderen.be/ns/generiek#VersieVolgensTransactietijd"
