@@ -21,7 +21,7 @@
     "Fietspad": "https://data.vlaanderen.be/ns/verkeersmetingen#Fietspad",
     "Fietspad.netwerkreferentie": {
       "@id": "https://data.vlaanderen.be/ns/netwerk#netwerkreferentie",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingendict_values(['#Netwerkreferentie'])"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Netwerkreferentie"
     },
     "Formaat": "https://data.vlaanderen.be/ns/sensoren-en-bemonstering#Formaat",
     "Gegevensdrager": "http://purl.org/dc/terms/PhysicalMedium",
@@ -50,7 +50,7 @@
     },
     "Identificator.toegekendDoor": {
       "@id": "http://purl.org/dc/terms/creator",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingendict_values(['#Lengte'])"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Lengte"
     },
     "Identificator.toegekendDoor (string)": {
       "@id": "http://www.w3.org/ns/adms#schemaAgency",
@@ -175,10 +175,10 @@
     "Object": "http://def.isotc211.org/iso19156/2011/GeneralFeatureInstance#GFI_Feature",
     "Observatie": "http://def.isotc211.org/iso19156/2011/Observation#OM_Observation",
     "Observatieprocedure": "https://www.w3.org/TR/vocab-ssn/#SOSAProcedure",
-    "Observatieprocedure.ge\u00c3\u00afmplementeerdMet": {
+    "Observatieprocedure.ge\u00efmplementeerdMet": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/ssn/implementedBy",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingendict_values(['#Lengte'])"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Lengte"
     },
     "Observatieprocedure.input": {
       "@container": "@set",
@@ -282,7 +282,7 @@
     "Toestel.hostVan": {
       "@container": "@set",
       "@id": "https://www.w3.org/ns/sosa/hosts",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingendict_values(['#Lengte'])"
+      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/verkeersmetingen#Lengte"
     },
     "Toestel.model": {
       "@id": "https://saref.etsi.org/core/hasModel",
