@@ -41,7 +41,7 @@
     },
     "GerichteLink.richting": {
       "@id": "https://data.vlaanderen.be/ns/netwerk#richting",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Identificator": "http://www.w3.org/ns/adms#Identifier",
     "Identificator.identificator": {
@@ -91,7 +91,7 @@
     },
     "Linkreferentie.toepassingsRichting": {
       "@id": "https://data.vlaanderen.be/ns/netwerk#Linkreferentie.toepassingsrichting",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Locatie": "http://www.w3.org/ns/prov#Location",
     "Metadata": "http://def.isotc211.org/iso19115/2006/MetadataEntitySetInformation#MD_Metadata",
@@ -148,7 +148,7 @@
     "Metadata.taal": {
       "@container": "@set",
       "@id": "http://purl.org/dc/elements/1.1/language",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Metadata.titel": {
       "@container": "@set",
@@ -158,7 +158,7 @@
     "Metadata.type": {
       "@container": "@set",
       "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Metadata.uitgever": {
       "@container": "@set",
@@ -203,7 +203,7 @@
     "Observatieprocedure.type": {
       "@container": "@set",
       "@id": "http://purl.org/cd/terms/type",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Observatieproceduretype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Observatieverzameling": "https://www.w3.org/TR/vocab-ssn-ext/#sosa:ObservationCollection",
@@ -231,7 +231,7 @@
     },
     "Rijrichting.rijrichting": {
       "@id": "https://data.vlaanderen.be/ns/weg#rijrichting",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Rijrichtingtype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Rijstrook": "https://data.vlaanderen.be/ns/verkeersmetingen#Rijstrook",
@@ -246,7 +246,7 @@
     "Rijstrook.rijstrooktype": {
       "@container": "@set",
       "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Rijstrooktype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Sensor": "https://www.w3.org/ns/sosa/Sensor",
@@ -306,24 +306,24 @@
     "Verkeersdeelnemer": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdeelnemer",
     "Verkeersdeelnemer.verkeersdeelnemertype": {
       "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Verkeersdeelnemertype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verkeersdomeinobject": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersdomeinobject",
     "Verkeerskenmerk": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeerskenmerk",
     "Verkeerskenmerk.type": {
       "@id": "http://purl.org/dc/elements/1.1/type",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Verkeerskenmerk.verkeersdeelnemertype": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/verkeersmetingen#verkeersdeelnemerType",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Verkeerskenmerk.voertuigType": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/verkeersmetingen#voertuigType",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Verkeerskenmerktype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Verkeersmeetpunt": "https://data.vlaanderen.be/ns/verkeersmetingen#Verkeersmeetpunt",
@@ -439,7 +439,7 @@
     "Voertuig": "https://data.vlaanderen.be/ns/verkeersmetingen#Voertuig",
     "Voertuig.voertuigtype": {
       "@id": "https://data.vlaanderen.be/ns/weg#voertuigtype",
-      "@type": null
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Voertuigtype": "http://www.w3.org/2004/02/skos/core#Concept",
     "Voetpad": "https://data.vlaanderen.be/ns/verkeersmetingen#Voetpad",
