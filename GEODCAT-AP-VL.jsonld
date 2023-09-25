@@ -10,7 +10,7 @@
     "Catalogus.alternatieveIdentificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/adms#Identifier"
     },
     "Catalogus.beschrijving": {
       "@container": "@set",
@@ -19,17 +19,17 @@
     },
     "Catalogus.contactinformatie": {
       "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Contactinfo"
+      "@type": "http://www.w3.org/2006/vcard/ns#Kind"
     },
     "Catalogus.heeftDataService": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#service",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dcat#DataService"
     },
     "Catalogus.heeftDataset": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#dataset",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dcat#Dataset"
     },
     "Catalogus.identificator": {
       "@id": "http://purl.org/dc/terms/identifier",
@@ -37,12 +37,12 @@
     },
     "Catalogus.licentie": {
       "@id": "http://purl.org/dc/terms/license",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Licentie Document"
+      "@type": "http://purl.org/dc/terms/LicenseDocument"
     },
     "Catalogus.record": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#record",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Catalogus Record"
+      "@type": "http://www.w3.org/ns/dcat#CatalogRecord"
     },
     "Catalogus.titel": {
       "@container": "@set",
@@ -51,7 +51,7 @@
     },
     "Catalogus.uitgever": {
       "@id": "http://purl.org/dc/terms/publisher",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Agent"
+      "@type": "http://purl.org/dc/terms/Agent"
     },
     "CatalogusRecord": "http://www.w3.org/ns/dcat#CatalogRecord",
     "CatalogusRecord.aanmaakdatum": {
@@ -61,24 +61,24 @@
     "CatalogusRecord.alternatieveIdentificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/adms#Identifier"
     },
     "CatalogusRecord.bronMetadataRecordLandingspagina": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#bronMetadataRecordLandingspagina",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     "CatalogusRecord.bronMetadatarecord": {
       "@id": "http://purl.org/dc/terms/source",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     "CatalogusRecord.conform": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://purl.org/dc/terms/Standard"
     },
     "CatalogusRecord.hoofdonderwerp": {
       "@id": "http://xmlns.com/foaf/0.1/primaryTopic",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dcat#Resource"
     },
     "CatalogusRecord.identificator": {
       "@id": "http://purl.org/dc/terms/identifier",
@@ -97,11 +97,11 @@
     "CatalogusResource.relatie": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/relation",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dcat#Resource"
     },
     "CatalogusResource.uitgever": {
       "@id": "http://purl.org/dc/terms/publisher",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://purl.org/dc/terms/Agent"
     },
     "Contactinfo": "http://www.w3.org/2006/vcard/ns#Kind",
     "Contactinfo.contactpagina": {
@@ -117,7 +117,7 @@
     "Dataservice.alternatieveIdentificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/adms#Identifier"
     },
     "Dataservice.beschrijving": {
       "@container": "@set",
@@ -127,16 +127,16 @@
     "Dataservice.biedtInformatieAanOver": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#servesdataset",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dcat#Dataset"
     },
     "Dataservice.conformAanProtocol": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://purl.org/dc/terms/Standard"
     },
     "Dataservice.contactinformatie": {
       "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Contactinfo"
+      "@type": "http://www.w3.org/2006/vcard/ns#Kind"
     },
     "Dataservice.creatiedatum": {
       "@id": "http://purl.org/dc/terms/created",
@@ -153,7 +153,7 @@
     "Dataservice.geografischeDekking": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://purl.org/dc/terms/Location"
     },
     "Dataservice.identificator": {
       "@id": "http://purl.org/dc/terms/identifier",
@@ -166,15 +166,15 @@
     },
     "Dataservice.landingspaginaVoorAuthenticatie": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorAuthenticatie",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     "Dataservice.landingspaginaVoorGebruiksinformatie": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorGebruiksinformatie",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     "Dataservice.landingspaginaVoorStatusinformatie": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#landingspaginaVoorStatusinformatie",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     "Dataservice.levensfase": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#levensfase",
@@ -182,7 +182,7 @@
     },
     "Dataservice.licentie": {
       "@id": "http://purl.org/dc/terms/license",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Licentie Document"
+      "@type": "http://purl.org/dc/terms/LicenseDocument"
     },
     "Dataservice.ontwikkelingstoestand": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#ontwikkelingstoestand",
@@ -200,12 +200,12 @@
     "Dataservice.serviceCategorie": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/metadata-dcat#servicecategorie",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Dataservice.serviceType": {
       "@container": "@set",
       "@id": "https://data.vlaanderen.be/ns/metadata-dcat#servicetype",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Dataservice.statuut": {
       "@container": "@set",
@@ -243,7 +243,7 @@
     "Dataset.alternatieveIdentificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/adms#Identifier"
     },
     "Dataset.beschrijving": {
       "@container": "@set",
@@ -253,11 +253,11 @@
     "Dataset.conform": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Standaard"
+      "@type": "http://purl.org/dc/terms/Standard"
     },
     "Dataset.contactinformatie": {
       "@id": "http://www.w3.org/ns/dcat#contactPoint",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Contactinfo"
+      "@type": "http://www.w3.org/2006/vcard/ns#Kind"
     },
     "Dataset.creatiedatum": {
       "@id": "http://purl.org/dc/terms/created",
@@ -266,27 +266,27 @@
     "Dataset.distributie": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#distribution",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Distributie"
+      "@type": "http://www.w3.org/ns/dcat#Distribution"
     },
     "Dataset.eigenaar": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/rightsHolder",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Agent"
+      "@type": "http://purl.org/dc/terms/Agent"
     },
     "Dataset.gemetConcept": {
       "@container": "@set",
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#GEMETconcept",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Dataset.geografischeDekking": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/spatial",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://purl.org/dc/terms/Location"
     },
     "Dataset.herkomst": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/provenance",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Herkomst Verklaring"
+      "@type": "http://purl.org/dc/terms/ProvenanceStatement"
     },
     "Dataset.identificator": {
       "@id": "http://purl.org/dc/terms/identifier",
@@ -295,12 +295,12 @@
     "Dataset.inspireThema": {
       "@container": "@set",
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#INSPIREthema",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Dataset.isoCategorie": {
       "@container": "@set",
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#ISOcategorie",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Dataset.landingspagina": {
       "@container": "@set",
@@ -313,11 +313,11 @@
     },
     "Dataset.ruimtelijkVoorstellingstype": {
       "@id": "http://www.w3.org/ns/adms#representionTechnique",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Dataset.ruimtelijkeResolutie": {
       "@id": "http://www.w3.org/ns/dqv#hasQualityMeasurement",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dqv#QualityMeasurement"
     },
     "Dataset.status": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#status",
@@ -354,7 +354,7 @@
     "Dataset.voorbeeldweergave": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#sample",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Voorbeeldweergave"
+      "@type": "http://www.w3.org/ns/dcat#Distribution"
     },
     "Dataset.wijzigingsdatum": {
       "@id": "http://purl.org/dc/terms/modified",
@@ -364,12 +364,12 @@
     "Distributie.alternatieveIdentificator": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/adms#identifier",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/adms#Identifier"
     },
     "Distributie.conform": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/conformsTo",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Standaard"
+      "@type": "http://purl.org/dc/terms/Standard"
     },
     "Distributie.downloadUrl": {
       "@id": "http://www.w3.org/ns/dcat#downloadURL",
@@ -385,12 +385,12 @@
     },
     "Distributie.licentie": {
       "@id": "http://purl.org/dc/terms/license",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Licentie Document"
+      "@type": "http://purl.org/dc/terms/LicenseDocument"
     },
     "Distributie.rechten": {
       "@container": "@set",
       "@id": "http://purl.org/dc/terms/rights",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Juridische bepaling"
+      "@type": "http://purl.org/dc/terms/RightsStatement"
     },
     "Distributie.titel": {
       "@container": "@set",
@@ -403,18 +403,18 @@
     },
     "Distributie.verdeler": {
       "@id": "http://data.europa.eu/930/distributor",
-      "@type": "https://data.vlaanderen.be/doc/applicatieprofiel/GEODCAT-AP-VL#Agent"
+      "@type": "http://purl.org/dc/terms/Agent"
     },
     "Distributie.wordtAangebodenDoor": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#accessService",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dcat#DataService"
     },
     "HerkomstVerklaring": "http://purl.org/dc/terms/ProvenanceStatement",
     "Identificator": "http://www.w3.org/ns/adms#Identifier",
     "Identificator.gestructureerdeIdentificator": {
       "@id": "http://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator"
     },
     "Identificator.notatie": {
       "@id": "http://www.w3.org/2004/02/skos/core#notation",
@@ -422,7 +422,7 @@
     },
     "Identificator.toegekendDoor": {
       "@id": "http://purl.org/dc/terms/creator",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://purl.org/dc/terms/Agent"
     },
     "Identificator.toegekendDoor (string)": {
       "@id": "http://www.w3.org/ns/adms#schemaAgency",
@@ -440,7 +440,7 @@
       "@id": "http://www.w3.org/ns/dcat#bbox",
       "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
-    "Plaats.centro\u00efde": {
+    "Plaats.centroïde": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/dcat#centroid",
       "@type": "http://www.w3.org/2000/01/rdf-schema#Literal"
@@ -458,20 +458,20 @@
     "RelatieQualificatie": "http://www.w3.org/ns/dcat#Relationship",
     "RelatieQualificatie.catalogusResource(source)": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.source",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dcat#Resource"
     },
     "RelatieQualificatie.catalogusResource(target)": {
       "@id": "http://data.vlaanderen.be/ns/metadata-dcat#RelatieQualificatie.catalogusResource.target",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/ns/dcat#Resource"
     },
     "RelatieQualificatie.rol": {
       "@id": "http://www.w3.org/ns/dcat#hadRole",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Resolutie": "http://www.w3.org/ns/dqv#QualityMeasurement",
     "Resolutie.resolutieMethode": {
       "@id": "http://www.w3.org/ns/dqv#isMeasurementOf",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2004/02/skos/core#Concept"
     },
     "Resolutie.waarde": {
       "@id": "http://www.w3.org/ns/dqv#value",
@@ -488,7 +488,7 @@
     },
     "Standaard.specificatieUrl": {
       "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-      "@type": "http://www.w3.org/2001/XMLSchema#Decimal"
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Resource"
     },
     "Standaard.titel": {
       "@container": "@set",
