@@ -138,7 +138,7 @@
     "Bemonsteringsprocedure.geïmplementeerdDoor": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/ssn/implementedBy",
-      "@type": "https://schema.org/Number"
+      "@type": "http://www.w3.org/ns/sosa/Sampler"
     },
     "Bemonsteringsprocedure.input": {
       "@container": "@set",
@@ -497,7 +497,7 @@
     "Observatieprocedure.geïmplementeerdMet": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/ssn/implementedBy",
-      "@type": "https://schema.org/Number"
+      "@type": "http://www.w3.org/ns/sosa/Sampler"
     },
     "Observatieprocedure.input": {
       "@container": "@set",
