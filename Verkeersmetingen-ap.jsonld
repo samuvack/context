@@ -178,7 +178,7 @@
     "Observatieprocedure.geïmplementeerdMet": {
       "@container": "@set",
       "@id": "http://www.w3.org/ns/ssn/implementedBy",
-      "@type": "http://def.isotc211.org/iso19103/2015/MeasureTypes#Length"
+      "@type": "https://www.w3.org/ns/sosa/Sensor"
     },
     "Observatieprocedure.input": {
       "@container": "@set",
